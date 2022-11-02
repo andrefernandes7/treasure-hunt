@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fc946362.css",
+    "main.js": "/static/js/main.fc2f231d.js",
+    "static/js/787.51918977.chunk.js": "/static/js/787.51918977.chunk.js",
+    "static/media/OpenSans-ExtraBold.ttf": "/static/media/OpenSans-ExtraBold.df2044929df5b18703f1.ttf",
+    "static/media/OpenSans-Medium.ttf": "/static/media/OpenSans-Medium.a4894b36b47378c77c5f.ttf",
+    "static/media/OpenSans-Regular.ttf": "/static/media/OpenSans-Regular.77c09223204154ae8d43.ttf",
+    "static/media/OpenSans-Bold.ttf": "/static/media/OpenSans-Bold.fa428cdd2e334e2be904.ttf",
+    "static/media/OpenSans-Light.ttf": "/static/media/OpenSans-Light.55d5015c3ced03510e63.ttf",
+    "static/media/OpenSans-SemiBold.ttf": "/static/media/OpenSans-SemiBold.2f17aae884058c5a85df.ttf",
+    "index.html": "/index.html",
+    "main.fc946362.css.map": "/static/css/main.fc946362.css.map",
+    "main.fc2f231d.js.map": "/static/js/main.fc2f231d.js.map",
+    "787.51918977.chunk.js.map": "/static/js/787.51918977.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc946362.css",
+    "static/js/main.fc2f231d.js"
+  ]
+}
