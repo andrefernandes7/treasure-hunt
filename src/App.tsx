@@ -29,6 +29,7 @@ function App() {
       setCookie("qrcodes", [false, false, false, false, false])
       window.location.reload()
     }
+    
     hashs.map((h, i) => {
       if(window.location.href.includes(h)){
         setScan(true)
