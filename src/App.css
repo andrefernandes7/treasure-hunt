@@ -1,38 +1,168 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary: #1c3864;
+  --secondary: #ec511f;
+  --white: #FFF;
+  --black: #222;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('../fonts/OpenSans/OpenSans-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('../fonts/OpenSans/OpenSans-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('../fonts/OpenSans/OpenSans-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+.body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: 'Open sans';
+}
+
+.container{
+  width: 500px;
+}
+
+.withoutScan h1{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.withoutScan h1 span {
+  color: var(--secondary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.welcome {
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome h1{
+  color: var(--secondary);
+  padding-bottom: 18px;
+}
+
+.welcome p{
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
+.welcome p span{
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.question{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.question p{
+  font-size: 22px;
+  padding-bottom: 10px;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.question input {
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background: transparent;
+  transition: 0.3s all
+}
+
+.question input:focus {
+  transition: 0.3s all;
+  border: 2px solid var(--secondary);
+}
+
+button{
+  all: unset;
+  width: 120px;
+  padding: 12px 0;
+  font-size: 18px;
+  background-color: var(--secondary);
+  text-align: center;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.welcome button{
+  padding: 8px;
+  margin-top: 18px;
+}
+
+.nextQuestion{
+  font-size: 24px;
+  text-align: center;
+}
+
+.nextQuestion p{
+  padding: 4px 0;
+}
+
+.nextQuestion .tip{
+  font-size: 32px;
+  font-weight: 600;
+  padding-top: 12px;
+  color: var(--secondary);
+}
+
+.nextQuestion h1{
+  color: var(--secondary);
+}
+
+.nextQuestion p span {
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 28px;
+}
+
+@media (max-width: 500px) {
+  .container{
+    width: 90%;
   }
 }
