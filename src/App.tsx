@@ -12,14 +12,12 @@ interface IQuestion{
 
 function App() {
   const [answered, setAnswered] = useState(false)
-  // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [welcome, setWelcome] = useState(localStorage.getItem('welcome'))
   const [scan, setScan] = useState(false)
   const hashs = ["elevator-glasses", "fuel-wakeup", "fish-down", "ideas-sun", "rest-restroom"]
   const [qrcodeQuestion, setQrcodeQuestion] = useState<IQuestion>({question: '', answers: [], counter: 0});
   
   const handleContinue = () => {
-    // setCookie("welcome", "true")
     localStorage.setItem("welcome", 'true')
     setWelcome(true)
   }
