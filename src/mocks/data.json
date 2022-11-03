@@ -21,7 +21,7 @@
             "counter": 2
         },
         {
-            "question": "Quais são os quesitos avaliados pela nossa banca avaliadora?",
+            "question": "Quais são os quesitos avaliados pela nossa banca avaliadora? (separe por vírgula)",
             "answers": ["originalidade", "design", "utilidade", "produto de mercado", "viabilidade", "pitch"],
             "counter": 6
         }
