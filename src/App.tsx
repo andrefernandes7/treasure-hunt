@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useCookies } from 'react-cookie';
 import './App.css';
 import NextQRCode from './components/NextQRCode.tsx';
 import QuestionForm from './components/QuestionForm.tsx';
@@ -13,28 +12,29 @@ interface IQuestion{
 
 function App() {
   const [answered, setAnswered] = useState(false)
-  const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
-  const [welcome, setWelcome] = useState(cookies['welcome'])
+  // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
+  const [welcome, setWelcome] = useState(localStorage.getItem('welcome'))
   const [scan, setScan] = useState(false)
   const hashs = ["elevator-glasses", "fuel-wakeup", "fish-down", "ideas-sun", "rest-restroom"]
   const [qrcodeQuestion, setQrcodeQuestion] = useState<IQuestion>({question: '', answers: [], counter: 0});
   
   const handleContinue = () => {
-    setCookie("welcome", "true")
+    // setCookie("welcome", "true")
+    localStorage.setItem("welcome", 'true')
     setWelcome(true)
   }
 
   useEffect(()=>{
-    if(!cookies['qrcodes'] ){
-      setCookie("qrcodes", [false, false, false, false, false])
-      window.location.reload()
+    if(!localStorage.getItem('qrcodes')){
+      let array = [false, false, false, false, false]
+      localStorage.setItem("qrcodes", JSON.stringify(array))
     }
-    
     hashs.map((h, i) => {
-      if(window.location.href.includes(h)){
+      if(window.location.href.includes('?qr='+h)){
         setScan(true)
         setQrcodeQuestion(data.questions[i])
-        if(cookies['qrcodes'][i]){
+        let qr = JSON.parse(localStorage.getItem('qrcodes'))
+        if(qr[i]){
           setAnswered(true)
         }
         return true
@@ -51,7 +51,7 @@ function App() {
       ):(<div className="container">
       {!welcome ? (
         <div className='welcome'>
-          <h1>Bem-vindo</h1>
+          <h1>Bem-vindo!</h1>
           <p>Agora você está participando do desafio do <span>hackfaesa 11.0</span>.</p>
           <p>Clique em <q>continuar</q> para começar.</p>
           <button onClick={()=>{handleContinue()}}>Continuar</button>
@@ -59,9 +59,9 @@ function App() {
       ):(
         <>
         {!answered ? (
-          <QuestionForm setAnswered={setAnswered} question={qrcodeQuestion} setCookie={setCookie} cookies={cookies} />
+          <QuestionForm setAnswered={setAnswered} question={qrcodeQuestion} />
           ):(
-            <NextQRCode tips={data.tips} cookies={cookies} answered={answered} />
+            <NextQRCode tips={data.tips} answered={answered} />
           )}
         </>
       )}

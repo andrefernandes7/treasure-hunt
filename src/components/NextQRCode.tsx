@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react'
 
 interface INextQRCode {
     tips: string[]
-    cookies: any
     answered: boolean
 }
 
-export default function NextQRCode ({tips, cookies, answered}:INextQRCode) {
+export default function NextQRCode ({tips, answered}:INextQRCode) {
     const [index, setIndex] = useState(0)
     
     useEffect(()=>{
-        let qrc:any[] = cookies['qrcodes']
+        let qrc:any[] = JSON.parse(localStorage.getItem('qrcodes'))
         let i = qrc.indexOf(false)
         setIndex(i)
     }, [answered])

@@ -10,11 +10,9 @@ interface IQuestion{
 interface IQuestionForm {
     setAnswered: React.Dispatch<React.SetStateAction<boolean>>
     question: IQuestion
-    setCookie: any
-    cookies: any
 }
 
-export default function QuestionForm ({setAnswered, question, setCookie, cookies}:IQuestionForm) {
+export default function QuestionForm ({setAnswered, question}:IQuestionForm) {
     const [answer, setAnswer] = useState('')
     const allData:IQuestion[] = data.questions
     const handeButtonClick = () => {
@@ -30,7 +28,7 @@ export default function QuestionForm ({setAnswered, question, setCookie, cookies
                 }
             })
             if(counter >= question.counter) {
-                let qrcodes = cookies['qrcodes']
+                let qrcodes = JSON.parse(localStorage.getItem("qrcodes"))
                 let index = 0
                 allData.map((ad, i:number) => {
                     if(ad.question.includes(question.question)){
@@ -39,7 +37,7 @@ export default function QuestionForm ({setAnswered, question, setCookie, cookies
                     }
                 })
                 qrcodes[index] = true
-                setCookie('qrcodes', qrcodes)
+                localStorage.setItem('qrcodes', JSON.stringify(qrcodes))
                 setAnswered(true)
             }else{
                 alert('Resposta incorreta!')
