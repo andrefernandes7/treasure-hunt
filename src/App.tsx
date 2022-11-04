@@ -15,7 +15,8 @@ function App() {
   const [welcome, setWelcome] = useState(localStorage.getItem('welcome'))
   const [scan, setScan] = useState(false)
   const hashs = ["elevator-glasses", "fuel-wakeup", "fish-down", "ideas-sun", "rest-restroom"]
-  const [qrcodeQuestion, setQrcodeQuestion] = useState<IQuestion>({question: '', answers: [], counter: 0});
+  const [qrcodeQuestion, setQrcodeQuestion] = useState<IQuestion>({question: '', answers: [], counter: 0})
+  const haveWinner = false
   
   const handleContinue = () => {
     localStorage.setItem("welcome", 'true')
@@ -42,11 +43,14 @@ function App() {
 
   return (
     <div className="body">
+      {!haveWinner ?
+      <>
       {!scan ? (
         <div className="container withoutScan">
           <h1>Parece que você <span>não scanneou</span> nenhum <span>QRCode</span>.</h1>
         </div>
-      ):(<div className="container">
+      ):(
+      <div className="container">
       {!welcome ? (
         <div className='welcome'>
           <h1>Bem-vindo!</h1>
@@ -63,7 +67,14 @@ function App() {
           )}
         </>
       )}
-    </div>)}
+      </div>)}
+      </>
+      :(
+        <div className="container">
+          <h1 style={{textAlign: 'center'}}><span style={{color: 'var(--secondary)'}}>Alguém</span> já <br /> acabou o <span style={{color: 'var(--secondary)'}}>desafio</span>.</h1>
+        </div>
+      )}
+      
     </div>
   );
 }
