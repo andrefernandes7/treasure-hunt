@@ -16,7 +16,7 @@ function App() {
   const [scan, setScan] = useState(false)
   const hashs = ["elevator-glasses", "fuel-wakeup", "fish-down", "ideas-sun", "rest-restroom"]
   const [qrcodeQuestion, setQrcodeQuestion] = useState<IQuestion>({question: '', answers: [], counter: 0})
-  const haveWinner = true
+  const haveWinner = false
   
   const handleContinue = () => {
     localStorage.setItem("welcome", 'true')
