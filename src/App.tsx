@@ -25,7 +25,7 @@ function App() {
 
   useEffect(()=>{
     if(!localStorage.getItem('qrcodes')){
-      let array = [true, true, true, true, true]
+      let array = [false, false, false, false, false]
       localStorage.setItem("qrcodes", JSON.stringify(array))
     }
     hashs.map((h, i) => {
