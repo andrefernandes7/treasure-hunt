@@ -25,7 +25,7 @@ function App() {
 
   useEffect(()=>{
     if(!localStorage.getItem('qrcodes')){
-      let array = [false, false, false, false, false]
+      let array = [true, true, true, true, true]
       localStorage.setItem("qrcodes", JSON.stringify(array))
     }
     hashs.map((h, i) => {
@@ -71,7 +71,7 @@ function App() {
       </>
       :(
         <div className="container">
-          <h1 style={{textAlign: 'center'}}><span style={{color: 'var(--secondary)'}}>Alguém</span> já <br /> acabou o <span style={{color: 'var(--secondary)'}}>desafio</span>.</h1>
+          <h1 style={{textAlign: 'center'}}><span style={{color: 'var(--secondary)'}}>Alguém</span> já <br /> completou o <span style={{color: 'var(--secondary)'}}>desafio</span>.</h1>
         </div>
       )}
       

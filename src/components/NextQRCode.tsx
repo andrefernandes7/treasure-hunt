@@ -23,9 +23,9 @@ export default function NextQRCode ({tips, answered}:INextQRCode) {
     ):(
         <div className="nextQuestion">
             <h1>PARABÉNS!</h1>
-            <h4>VOCÊ COMPLETOU<br />NOSSO DESAFIO!</h4>
-            <br />
-            <p>Agora vá até algum membro da comissão, e fale a frase: <br /><span>TROJAN INSERIDO COM SUCESSO</span></p>
+            <p className='winnerMessage'><strong>VOCÊ COMPLETOU<br />NOSSO DESAFIO!</strong></p>
+            <p className='winnerMessage'>Agora vá até algum membro da <br /> comissão, e fale a frase:</p>
+            <p className='winnerMessage'><span>TROJAN INSERIDO COM SUCESSO</span></p>
         </div>
     ))
 }

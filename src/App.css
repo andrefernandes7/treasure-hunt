@@ -144,6 +144,10 @@ button{
   padding: 4px 0;
 }
 
+.nextQuestion p.winnerMessage {
+  font-size: 16px;
+}
+
 .nextQuestion .tip{
   font-size: 32px;
   font-weight: 600;
@@ -158,7 +162,7 @@ button{
 .nextQuestion p span {
   color: var(--secondary);
   font-weight: 600;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 @media (max-width: 500px) {
