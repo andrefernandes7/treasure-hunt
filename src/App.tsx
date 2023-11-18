@@ -14,9 +14,9 @@ function App() {
   const [answered, setAnswered] = useState(false)
   const [welcome, setWelcome] = useState(localStorage.getItem('welcome'))
   const [scan, setScan] = useState(false)
-  const hashs = ["elevator-glasses", "fuel-wakeup", "fish-down", "ideas-sun", "rest-restroom"]
+  const hashs = ["inside-elevator", "rest-room", "game-room", "ideia-room", "keystore"]
   const [qrcodeQuestion, setQrcodeQuestion] = useState<IQuestion>({question: '', answers: [], counter: 0})
-  const haveWinner = true
+  const haveWinner = false
   
   const handleContinue = () => {
     localStorage.setItem("welcome", 'true')
@@ -54,7 +54,7 @@ function App() {
       {!welcome ? (
         <div className='welcome'>
           <h1>Bem-vindo!</h1>
-          <p>Agora você está participando do desafio do <span>hackfaesa 11.0</span>.</p>
+          <p>Agora você está participando do desafio do <span>hackfaesa 12.0</span>.</p>
           <p>Clique em <q>continuar</q> para começar.</p>
           <button onClick={()=>{handleContinue()}}>Continuar</button>
         </div>

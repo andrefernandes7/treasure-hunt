@@ -1,37 +1,37 @@
 {
     "questions": [
         {
-            "question": "Qual o nome dos 2 alunos que foram embaixadores do Hackfaesa?",
-            "answers": ["celso", "karine"],
+            "question": "Qual é o nome do protagonista da série de jogos The Legend of Zelda?",
+            "answers": ["link"],
+            "counter": 1
+        },
+        {
+            "question": "Quem foi o príncipe da Xuxa no filme Lua de Cristal",
+            "answers": ["sérgio", "mallandro"],
             "counter": 2
         },
         {
-            "question": "Cite pelo menos 3 PATROCINADORES dessa edição?",
-            "answers": ["arcelormittal", "inflor", "vale", "intelliway"],
-            "counter": 3
+            "question": "Qual o nome do dinossauro do filme Toy Story?",
+            "answers": ["rex"],
+            "counter": 1
         },
         {
-            "question": "Cite pelo menos 2 APOIADORES dessa edição?",
-            "answers": ["azys", "badWolf", "r2", "sankhya"],
-            "counter": 2
+            "question": "O que é o que é quanto mais se tira mais ele cresce",
+            "answers": ["buraco"],
+            "counter": 1
         },
         {
-            "question": "Quem foram os Palestrantes dos bootcamps dessa edição?",
-            "answers": ["tiarlen", "gabriel"],
-            "counter": 2
-        },
-        {
-            "question": "Quais são os quesitos avaliados pela nossa banca avaliadora? (separe por vírgula)",
-            "answers": ["originalidade", "design", "utilidade", "produto de mercado", "viabilidade", "pitch"],
-            "counter": 6
+            "question": "O que é o que é entra duro, sai mole e pigando",
+            "answers": ["macarrão"],
+            "counter": 1
         }
     ],
 
     "tips": [
-        "Quando o elevador abriu, talvez você viu. Se não, olhe um pouco abaixo dos vidros"
-        ,"Quando roncar, as pessoas vão pra lá. Você não vai morrer, mas vai matar"
-        ,"Lá ficam os peixes, mas agora temos humanos. Você vai ter que deitar para ver"
-        ,"Onde surgem as melhores ideias. Quando o sol bate, escurece o que está atrás"
-        ,"Descanse, mas não durma! Está atrás, mas não é do sanitário"
+        "Toque nos botões que conectam mundos. A ordem certa abrirá portas para uma jornada além dos andares tradicionais."
+        ,"Abra as portas que levam ao santuário do desacelerar. Entre, respire profundamente e permita que o ambiente relaxante revele o próximo segredo."
+        ,"Conecte-se ao universo virtual onde a realidade se transforma, no portal para aventuras digitais, onde a realidade se dissolve em pixels."
+        ,"Atravesse a porta que separa o convencional do extraordinário,  onde as ideias florescem e ganham vida. Siga a trilha colorida dos post-its, cada pequena nota é uma ideia, onde as notas se multiplicam em um mosaico de criatividade."
+        ,"Siga o irresistível aroma que dança no ar, onde os grãos torrados contam histórias de sabor e despertam os sentidos."
     ]
 }
